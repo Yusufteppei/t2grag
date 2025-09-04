@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+.user-text {
+    color: blue;
+    background-color: aliceblue;
+    text-align: end;
+    font-weight: bolder;
+}
+
+.assistant-text {
+    color: gray;
+    background-color: gainsboro ;
+    text-align: start;
+    font-weight: bolder;
+    text-overflow: wrap;
+}

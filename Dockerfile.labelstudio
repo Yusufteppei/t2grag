@@ -1,0 +1,7 @@
+FROM python:3.11-alpine3.17
+
+WORKDIR /app
+
+RUN pip install labelstudio
+
+#CMD labelstudio start --init --username admin --password t2grag --host

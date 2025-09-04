@@ -1,0 +1,81 @@
+version: '3.3'
+
+volumes:
+  db_data:
+  label_studio_data:
+  grafana_data:
+
+services:
+    
+    db:
+      image: postgres:14.5-alpine
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: t2grag
+      volumes:
+        - db_data:/var/lib/postgresql/data
+      ports:
+        - "127.0.0.1:5432:5432"
+
+    #frontend: 
+    #  build:
+    #    context: ./frontend
+    #    dockerfile: Dockerfile
+    #  ports:
+    #    - "4001:3000"
+      
+      
+    
+    #backend:
+      
+    #  build:
+    #    context: ./custom_gpt
+    #    dockerfile: Dockerfile
+    ##  ports:
+    #    - "8000:8000"
+    ##  depends_on:
+     #   - db
+     # env_file:
+     #   - ./custom_gpt/.env
+    
+    labelstudio:
+      image: heartexlabs/label-studio
+
+      ports:
+        - "8887:8080"
+      volumes:
+        - label_studio_data:/label-studio/data
+      environment:
+        - LABEL_STUDIO_USERNAME=admin
+        - LABEL_STUDIO_PASSWORD=admin
+        - LABEL_STUDIO_EMAIL=admin@labelstudio.app
+        - DJANGO_DB=default
+        - POSTGRE_NAME=postgres
+        - POSTGRE_USER=postgres
+        - POSTGRE_PASSWORD=postgres
+        - POSTGRE_PORT=5432
+        - POSTGRE_HOST=db
+        - DATABASE_URL=postgresql://postgres:postgres@db/labelstudio
+      command: label-studio start --init --username admin --password t2grag -db postgresql
+      depends_on:
+         - db
+      #  - backend
+      restart: always
+    
+    #vector-db: # HOST LOCAL VECTOR DB
+    #  volumes:
+    #    - data:data 
+    #  image: pgvector/pgvector
+  
+    grafana:
+      image: grafana/grafana-oss:latest
+      ports:
+        - "4000:3000"
+      environment:
+        - GF_SECURITY_ADMIN_USER=admin
+        - GF_SECURITY_ADMIN_PASSWORD=admin
+      depends_on:
+        - db
+      volumes:
+        - grafana_data:/var/lib/grafana
