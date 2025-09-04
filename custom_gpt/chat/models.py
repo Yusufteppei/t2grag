@@ -79,6 +79,7 @@ class Chat(models.Model):
         return super().save(*args, **kwargs)
 
 
+
 class Annotation(models.Model):
     created_at = models.DateTimeField()
     import_id = models.BigIntegerField()
