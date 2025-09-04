@@ -27,17 +27,17 @@ services:
       
       
     
-    #backend:
+    backend:
       
-    #  build:
-    #    context: ./custom_gpt
-    #    dockerfile: Dockerfile
-    ##  ports:
-    #    - "8000:8000"
-    ##  depends_on:
-     #   - db
-     # env_file:
-     #   - ./custom_gpt/.env
+      build:
+        context: ./custom_gpt
+        dockerfile: Dockerfile
+      ports:
+        - "8000:8000"
+      depends_on:
+        - db
+      env_file:
+        - .env
     
     labelstudio:
       image: heartexlabs/label-studio
