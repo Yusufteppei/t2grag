@@ -28,9 +28,17 @@
 		In a production environment, it would be better to have a separate lightweight service for serving this data and then setting a firewall around it.
 		
 ##	DEPLOYMENT
-	Clone repo: 
-		git clone https://github.com/Yusufteppei/t2grag.git
-	Move into repo directory:
-		cd t2grag
-	RUn docker compose:
+	Extract docker-compose file from repo
+	create .env file in the same directory
+	Run docker compose:
+		docker compose up
+##	ENV
+PINECONE_API_KEY=
+PINECONE_INDEX_NAME=custom-gpt
 
+OPENAI_API_KEY=
+
+LABEL_STUDIO_API_KEY=
+LABEL_STUDIO_URL=http://labelstudio:8887
+
+~                                       
