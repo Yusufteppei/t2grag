@@ -22,12 +22,13 @@ RUN pip install --upgrade pip \
 # Copy project files
 COPY . .
 
-# Collect static files (optional — required for production)
-RUN python manage.py collectstatic --noinput
-
 # Expose port (default for Django or Gunicorn)
 EXPOSE 8000
 
+# Collect static files (optional — required for production)
+CMD python manage.py collectstatic --noinput
+
+
 # Run Gunicorn (for production)
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
