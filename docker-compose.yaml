@@ -47,11 +47,11 @@ services:
         - LABEL_STUDIO_PASSWORD=admin
         - LABEL_STUDIO_EMAIL=admin@labelstudio.app
         - DJANGO_DB=default
-        - POSTGRE_NAME=postgres
-        - POSTGRE_USER=postgres
-        - POSTGRE_PASSWORD=postgres
-        - POSTGRE_PORT=5432
-        - POSTGRE_HOST=db
+          #- POSTGRE_NAME=postgres
+          #- POSTGRE_USER=postgres
+          #- POSTGRE_PASSWORD=postgres
+          #- POSTGRE_PORT=5432
+          #- POSTGRE_HOST=db
         - DATABASE_URL=postgresql://postgres:postgres@db:5432/labelstudio
       command: label-studio start --init --username admin --password t2grag -db postgresql
       depends_on:
