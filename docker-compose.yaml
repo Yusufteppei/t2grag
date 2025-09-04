@@ -25,14 +25,13 @@ services:
         #dockerfile: Dockerfile
       ports:
         - "4001:3000"
+      env_file:
+        - .env
       
       
     
     backend:
       image: registry.zaidyusuf.com/t2grag-api:latest 
-        #build:
-        #context: ./custom_gpt
-        #dockerfile: Dockerfile
       ports:
         - "8005:8000"
       depends_on:
@@ -61,7 +60,7 @@ services:
       command: label-studio start --init --username admin --password t2grag -db postgresql
       depends_on:
          - db
-      #  - backend
+         - backend
       restart: always
     
     #vector-db: # HOST LOCAL VECTOR DB
