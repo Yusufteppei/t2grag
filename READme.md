@@ -27,4 +27,10 @@
 		Due to the expiry of JWT tokens and the data wrangling limitation of grafana, the endpoint for reading the analytics of the annotations will be left open but throttled.
 		In a production environment, it would be better to have a separate lightweight service for serving this data and then setting a firewall around it.
 		
+##	DEPLOYMENT
+	Clone repo: 
+		git clone https://github.com/Yusufteppei/t2grag.git
+	Move into repo directory:
+		cd t2grag
+	RUn docker compose:
 

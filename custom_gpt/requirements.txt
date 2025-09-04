@@ -105,7 +105,6 @@ nipype==1.10.0
 nltk==3.9.1
 numpy==1.26.4
 openai==1.70.0
-opencv-python==4.11.0.86
 opentelemetry-api==1.36.0
 ordered-set==4.0.2
 packaging==24.2
@@ -159,8 +158,6 @@ rsa==4.9.1
 rstr==3.2.2
 rules==3.4
 s3transfer==0.13.1
-scikit-learn==1.6.1
-scipy==1.15.2
 semver==3.0.4
 sentry-sdk==2.35.2
 simplejson==3.20.1
