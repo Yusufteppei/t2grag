@@ -18,20 +18,21 @@ services:
       ports:
         - "127.0.0.1:5432:5432"
 
-    #frontend: 
-    #  build:
-    #    context: ./frontend
-    #    dockerfile: Dockerfile
-    #  ports:
-    #    - "4001:3000"
+    frontend: 
+      image: registry.zaidyusuf.com/t2grag-web:latest
+        #build:
+        #context: ./frontend
+        #dockerfile: Dockerfile
+      ports:
+        - "4001:3000"
       
       
     
     backend:
-      
-      build:
-        context: ./custom_gpt
-        dockerfile: Dockerfile
+      image: registry.zaidyusuf.com/t2grag-api:latest 
+        #build:
+        #context: ./custom_gpt
+        #dockerfile: Dockerfile
       ports:
         - "8000:8000"
       depends_on:
