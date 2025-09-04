@@ -26,7 +26,7 @@ COPY . .
 EXPOSE 8000
 
 # Collect static files (optional — required for production)
-CMD python manage.py collectstatic --noinput
+#CMD python manage.py collectstatic --noinput
 
 
 # Run Gunicorn (for production)
