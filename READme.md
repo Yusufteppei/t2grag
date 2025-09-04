@@ -43,3 +43,9 @@ LABEL_STUDIO_URL=http://labelstudio:8887
 
 NEXT_PUBLIC_URL=http://backend:8005
 ~                                       
+
+#	LIVE ON
+https://api.t2grag.zaidyusuf.com
+https://grafana.t2grag.zaidyusuf.com
+https://labelstudio.t2grag.zaidyusuf.com
+https://web.t2grag.zaidyusuf.com
