@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install pyarrow opencv-python --prefer-binary
-
 RUN pip install -r requirements.txt
 
 CMD [ "python", "runserver", "0.0.0.0:8000"]
