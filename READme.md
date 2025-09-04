@@ -41,4 +41,5 @@ OPENAI_API_KEY=
 LABEL_STUDIO_API_KEY=
 LABEL_STUDIO_URL=http://labelstudio:8887
 
+NEXT_PUBLIC_URL=http://backend:8005
 ~                                       
