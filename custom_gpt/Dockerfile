@@ -24,7 +24,6 @@ COPY . .
 
 RUN cd custom_gpt
 
-RUN python manage.py makemigrations && python manage.py migrate
 
 # Expose port (default for Django or Gunicorn)
 EXPOSE 8000
@@ -33,5 +32,5 @@ EXPOSE 8000
 #CMD python manage.py collectstatic --noinput
 
 # Run Gunicorn (for production)
-ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python", "manage.py", "migrate", "&&", "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
