@@ -34,7 +34,7 @@ services:
         #context: ./custom_gpt
         #dockerfile: Dockerfile
       ports:
-        - "8000:8000"
+        - "8005:8000"
       depends_on:
         - db
       env_file:
@@ -72,7 +72,7 @@ services:
     grafana:
       image: grafana/grafana-oss:latest
       ports:
-        - "4000:3000"
+        - "4005:3000"
       environment:
         - GF_SECURITY_ADMIN_USER=admin
         - GF_SECURITY_ADMIN_PASSWORD=admin
