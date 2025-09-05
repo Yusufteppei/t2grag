@@ -44,8 +44,12 @@ LABEL_STUDIO_URL=http://labelstudio:8887
 NEXT_PUBLIC_URL=http://backend:8005
 ~                                       
 
-#	LIVE ON
+#	LIVE DEPLOYMENT ON ..
 https://api.t2grag.zaidyusuf.com
 https://grafana.t2grag.zaidyusuf.com
 https://labelstudio.t2grag.zaidyusuf.com
 https://web.t2grag.zaidyusuf.com
+
+
+##	IN PRODUCTION, IN ORDER TO PROTECT THE DATABASE GRAFANA COULD EITHER BE HOSTED WITHIN A PRIVATE NETWORK OR THE METRICS SHOULD BE EXPORTED
+##	VIA A SEPARATE SERVICE LIKE PROMETHEUS BUT FOR DEMONSTRATION AND DEPLOYMENT SIMPLICITY, IT WILL BE LEFT OPEN.
