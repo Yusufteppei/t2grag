@@ -34,12 +34,15 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://127.0.0.1:3001',
     'http://localhost:3001',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    os.getenv('BACKEND_HOST') if os.getenv('BACKEND_HOST')
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
-    'http://localhost:3000'
+    'http://localhost:3000',
+     os.getenv('FRONTEND_HOST') if os.getenv('FRONTEND_HOST')
+
 ]
 
 CSRF_COOKIE_NAME = 'csrftoken'  # CSRF token cookie name

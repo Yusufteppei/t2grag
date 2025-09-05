@@ -32,5 +32,6 @@ EXPOSE 8000
 #CMD python manage.py collectstatic --noinput
 
 # Run Gunicorn (for production)
-ENTRYPOINT ["python", "manage.py", "migrate", "&&", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "migrate"]
+ENTRYPOINT [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
