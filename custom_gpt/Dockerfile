@@ -22,9 +22,6 @@ RUN pip install --upgrade pip \
 # Copy project files
 COPY . .
 
-RUN cd custom_gpt
-
-
 # Expose port (default for Django or Gunicorn)
 EXPOSE 8000
 
