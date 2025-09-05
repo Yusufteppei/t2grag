@@ -15,7 +15,7 @@ services:
       volumes:
         - db_data:/var/lib/postgresql/data
       ports:
-        - "5435:5432" # LEFT INSECURE FOR DEMONSTRATION PURPOSES
+        - "5432:5432" # LEFT INSECURE FOR DEMONSTRATION PURPOSES
 
     frontend: 
       image: registry.zaidyusuf.com/t2grag-web:latest
@@ -44,17 +44,16 @@ services:
         - label_studio_data:/label-studio/data
       environment:
         - LABEL_STUDIO_USERNAME=admin
-        - LABEL_STUDIO_PASSWORD=admin
+        - LABEL_STUDIO_PASSWORD=t2grag
         - LABEL_STUDIO_EMAIL=admin@labelstudio.app
         - LABEL_STUDIO_HOST=https://labelstudio.t2grag.zaidyusuf.com
-          #- DJANGO_DB=default
-          #- POSTGRE_NAME=postgres
-          #- POSTGRE_USER=postgres
-          #- POSTGRE_PASSWORD=postgres
-          #- POSTGRE_PORT=5432
-          #- POSTGRE_HOST=db
-          #- DATABASE_URL=postgresql://postgres:postgres@db:5432/labelstudio
-      command: label-studio start --init --username admin --password t2grag #-db postgresql
+        - DJANGO_DB=default
+        - POSTGRE_NAME=postgres
+        - POSTGRE_USER=postgres
+        - POSTGRE_PASSWORD=postgres
+        - POSTGRE_PORT=5432
+        - POSTGRE_HOST=db
+      command: label-studio start  #-db postgresql
       depends_on:
          - db
          - backend

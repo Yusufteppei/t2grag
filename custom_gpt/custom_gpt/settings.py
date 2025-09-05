@@ -41,7 +41,7 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://localhost:3000',
-     os.getenv('FRONTEND_HOST') if os.getenv('FRONTEND_HOST')
+     os.getenv('FRONTEND_HOST') if os.getenv('FRONTEND_HOST') else None
 
 ]
 

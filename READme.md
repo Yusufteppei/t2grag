@@ -27,11 +27,13 @@
 		Due to the expiry of JWT tokens and the data wrangling limitation of grafana, the endpoint for reading the analytics of the annotations will be left open but throttled.
 		In a production environment, it would be better to have a separate lightweight service for serving this data and then setting a firewall around it.
 		
-##	DEPLOYMENT
+#	DEPLOYMENT  - DOCKER COMPOSE
 	Extract docker-compose file from repo
 	create .env file in the same directory
 	Run docker compose:
 		docker compose up
+
+		
 ##	ENV
 PINECONE_API_KEY=
 PINECONE_INDEX_NAME=custom-gpt
@@ -41,7 +43,7 @@ OPENAI_API_KEY=
 LABEL_STUDIO_API_KEY=
 LABEL_STUDIO_URL=http://labelstudio:8887
 
-NEXT_PUBLIC_URL=http://backend:8005
+NEXT_PUBLIC_URL=http://localhost:8005 or <BACKEND URL>
 ~                                       
 
 #	LIVE DEPLOYMENT ON ..
