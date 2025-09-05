@@ -52,8 +52,8 @@ services:
           #- POSTGRE_PASSWORD=postgres
           #- POSTGRE_PORT=5432
           #- POSTGRE_HOST=db
-        - DATABASE_URL=postgresql://postgres:postgres@db:5432/labelstudio
-      command: label-studio start --init --username admin --password t2grag -db postgresql
+          #- DATABASE_URL=postgresql://postgres:postgres@db:5432/labelstudio
+      command: label-studio start --init --username admin --password t2grag #-db postgresql
       depends_on:
          - db
          - backend
