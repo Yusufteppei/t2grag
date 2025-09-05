@@ -21,6 +21,7 @@ jobs:
           context: ./custom_gpt
           file: ./custom_gpt/Dockerfile
           push: true
+          no-cache: true
           tags: |
               registry.zaidyusuf.com/t2grag-api:latest
               registry.zaidyusuf.com/t2grag-api:${{ github.sha }}
@@ -31,6 +32,7 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
+          no-cache: true
           tags: |
               registry.zaidyusuf.com/t2grag-web:latest
               registry.zaidyusuf.com/t2grag-web:${{ github.sha }}
