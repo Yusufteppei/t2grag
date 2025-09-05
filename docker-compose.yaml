@@ -46,7 +46,7 @@ services:
         - LABEL_STUDIO_USERNAME=admin
         - LABEL_STUDIO_PASSWORD=admin
         - LABEL_STUDIO_EMAIL=admin@labelstudio.app
-        - DJANGO_DB=default
+          #- DJANGO_DB=default
           #- POSTGRE_NAME=postgres
           #- POSTGRE_USER=postgres
           #- POSTGRE_PASSWORD=postgres
