@@ -46,6 +46,7 @@ services:
         - LABEL_STUDIO_USERNAME=admin
         - LABEL_STUDIO_PASSWORD=admin
         - LABEL_STUDIO_EMAIL=admin@labelstudio.app
+        - LABEL_STUDIO_HOST=https://labelstudio.t2grag.zaidyusuf.com
           #- DJANGO_DB=default
           #- POSTGRE_NAME=postgres
           #- POSTGRE_USER=postgres
