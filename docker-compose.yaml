@@ -71,7 +71,7 @@ services:
       environment:
         - GF_SECURITY_ADMIN_USER=admin
         - GF_SECURITY_ADMIN_PASSWORD=admin
-        - GF_SERVER_ROOT_URL=https://grafana.t2grag.zaidyusuf.com
+        - GF_SERVER_ROOT_URL=https://grafana.t2grag.zaidyusuf.com/
       depends_on:
         - db
       volumes:
