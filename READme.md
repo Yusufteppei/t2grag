@@ -48,6 +48,7 @@ NEXT_PUBLIC_URL=http://localhost:8005 or <BACKEND URL>
 
 #	LIVE DEPLOYMENT ON ..
 https://api.t2grag.zaidyusuf.com
+email: admin@t2grag.com  username: admin password: t2grag
 https://grafana.t2grag.zaidyusuf.com
 https://labelstudio.t2grag.zaidyusuf.com
 https://web.t2grag.zaidyusuf.com
