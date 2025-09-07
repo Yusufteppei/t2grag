@@ -35,13 +35,13 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:3001',
     'http://localhost:3001',
     'http://localhost:3000',
-    os.getenv('BACKEND_HOST') if os.getenv('BACKEND_HOST') else 'https://api.t2grag.zaidyusuf.com'
+    os.getenv('BACKEND_HOST', 'https://api.t2grag.zaidyusuf.com')
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://localhost:3000',
-    os.getenv('FRONTEND_HOST') if os.getenv('FRONTEND_HOST') else 'https://web.t2grag.zaidyusuf.com'
+    os.getenv('FRONTEND_HOST', 'https://web.t2grag.zaidyusuf.com')
 
 ]
 
