@@ -15,7 +15,7 @@ services:
       volumes:
         - db_data:/var/lib/postgresql/data
       ports:
-        - "5432:5432" # LEFT INSECURE FOR DEMONSTRATION PURPOSES
+        - "5435:5432" # LEFT INSECURE FOR DEMONSTRATION PURPOSES
 
     frontend: 
       image: registry.zaidyusuf.com/t2grag-web:latest

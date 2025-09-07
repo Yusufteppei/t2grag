@@ -28,7 +28,6 @@ EXPOSE 8000
 # Collect static files (optional — required for production)
 #CMD python manage.py collectstatic --noinput
 
-# Run Gunicorn (for production)
-CMD ["python", "manage.py", "migrate"]
-ENTRYPOINT [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
+# Run migrations and then start Django dev server
+ENTRYPOINT ["/bin/sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
