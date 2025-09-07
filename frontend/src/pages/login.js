@@ -1,6 +1,6 @@
 import React from 'react';
 
-const URL = 'http://localhost:8000';
+const URL = process.env.NEXT_PUBLIC_URL;
 const LoginPage = () => {
 
     const [username, setUsername] = React.useState("");
